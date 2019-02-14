@@ -1,4 +1,5 @@
 package itcarlow.c00204384.code;
 
-public class CarParkKind {
+public enum CarParkKind {
+    STAFF, STUDENT, MANAGEMENT, VISITOR
 }
