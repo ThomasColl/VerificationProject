@@ -7,9 +7,10 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.IllformedLocaleException;
 
 import static org.junit.Assert.*;
+
+//TODO HANLE PERIOD OVERLAP
 
 public class CollThomasTestTask1 {
 
@@ -22,17 +23,13 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(Integer.MIN_VALUE);
         //Reduced Rate
-        BigDecimal reducedRate = BigDecimal.valueOf(Integer.MIN_VALUE);
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
     }
@@ -43,17 +40,13 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(-1);
         //Reduced Rate
-        BigDecimal reducedRate = BigDecimal.valueOf(-1);
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
     }
@@ -64,17 +57,13 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(-0.1);
         //Reduced Rate
-        BigDecimal reducedRate = BigDecimal.valueOf(-1);
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
     }
@@ -85,13 +74,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(0);
         //Reduced Rate
@@ -109,13 +94,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(0.1);
         //Reduced Rate
@@ -133,13 +114,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(1);
         //Reduced Rate
@@ -157,13 +134,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         //Reduced Rate
@@ -183,13 +156,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(3);
         //Reduced Rate
@@ -204,13 +173,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(3);
         //Reduced Rate
@@ -225,13 +190,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(1);
         //Reduced Rate
@@ -246,13 +207,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(0);
         //Reduced Rate
@@ -270,13 +227,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(6);
         //Reduced Rate
@@ -294,13 +247,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(6);
         //Reduced Rate
@@ -318,13 +267,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         //Reduced Rate
@@ -338,21 +283,17 @@ public class CollThomasTestTask1 {
     /* ---------- NORMAL RATE >= REDUCED RATE TESTING ---------- */
 
     @Test (expected = IllegalArgumentException.class)
-    public void isNormalRateGreaterThanReducedRateMinIntVsMaxInt() {
+    public void isNormalRateGreaterThanReducedRateReducedMaxInt() {
         //CarParkKind
         CarParkKind kind = CarParkKind.STUDENT;
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
-        BigDecimal normalRate = BigDecimal.valueOf(Integer.MIN_VALUE);
+        BigDecimal normalRate = BigDecimal.valueOf(0);
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         // Rate Class to be tested - Line of Failure
@@ -365,13 +306,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(10);
         //Reduced Rate
@@ -386,13 +323,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(0);
         //Reduced Rate
@@ -409,13 +342,9 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(20);
         //Reduced Rate
@@ -432,21 +361,167 @@ public class CollThomasTestTask1 {
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
         normalPeriods.add(new Period(10, 12));
-        normalPeriods.add(new Period(13, 14));
-        normalPeriods.add(new Period(15, 16));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
-        reducedPeriods.add(new Period(20, 21));
-        reducedPeriods.add(new Period(22, 23));
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         //Reduced Rate
-        BigDecimal reducedRate = BigDecimal.valueOf(Integer.MIN_VALUE);
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
 
         assertTrue(rate.normalRate.compareTo(rate.reducedRate) >= 0);
+    }
+
+    /* ---------- NULL INPUT TESTING ---------- */
+
+    @Test (expected = IllegalArgumentException.class)
+    public void kindIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = null;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void normalPeriodsIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = null;
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void reducedPeriodsIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = null;
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void normalRateIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = null;
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void reducedRateIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(10);
+        //Reduced Rate
+        BigDecimal reducedRate = null;
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+
+    /* ---------- OVERLAP TESTING ---------- */
+
+    @Test (expected = IllegalArgumentException.class)
+    public void doesNormalPeriodFeatureOverlappingPeriods() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        normalPeriods.add(new Period(11, 13));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void doesReducedPeriodFeatureOverlappingPeriods() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        reducedPeriods.add(new Period(16, 22));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+    }
+    @Test (expected = IllegalArgumentException.class)
+    public void doesReducedPeriodAndNormalPeriodOverlap() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 16));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
     }
 
     /* ---------- CALCULATION TESTING ---------- */
