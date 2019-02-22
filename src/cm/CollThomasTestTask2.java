@@ -1,21 +1,16 @@
-package itcarlow.c00204384.test;
+package cm;
 
 
-
-import itcarlow.c00204384.code.CarParkKind;
-import itcarlow.c00204384.code.Period;
-import itcarlow.c00204384.code.Rate;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 //TODO HANLE PERIOD OVERLAP
 
-public class CollThomasTestTask1 {
+public class CollThomasTestTask2 {
 
     /* ---------- NORMAL RATE INPUT TESTING ---------- */
 
@@ -34,7 +29,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test (expected = IllegalArgumentException.class)
     public void isNormalRateANormalNumberMinusOne() {
@@ -51,7 +46,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test (expected = IllegalArgumentException.class)
     public void isNormalRateANormalNumberMinusPointOne() {
@@ -68,7 +63,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateANormalNumberZero() {
@@ -85,10 +80,8 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.normalRate.compareTo(BigDecimal.valueOf(0)) == 0);
     }
     @Test
     public void isNormalRateANormalNumberPlusPointOne() {
@@ -105,10 +98,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.normalRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateANormalNumberPlusOne() {
@@ -123,12 +113,9 @@ public class CollThomasTestTask1 {
         //Normal Rate
         BigDecimal normalRate = BigDecimal.valueOf(1);
         //Reduced Rate
-        BigDecimal reducedRate = BigDecimal.valueOf(1);
+        BigDecimal reducedRate = BigDecimal.valueOf(0.5);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.normalRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateANormalNumberMaxInt() {
@@ -145,9 +132,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(1);
         // Rate Class to be tested
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        assertTrue(rate.normalRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     /* ---------- REDUCED RATE INPUT TESTING ---------- */
@@ -167,7 +152,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(Integer.MIN_VALUE);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test (expected = IllegalArgumentException.class)
     public void isReducedRateANormalNumberMinusOne() {
@@ -184,7 +169,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(-1);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test (expected = IllegalArgumentException.class)
     public void isReducedRateANormalNumberMinusPointOne() {
@@ -201,7 +186,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(-0.1);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isReducedRateANormalNumberZero() {
@@ -218,10 +203,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.reducedRate.compareTo(BigDecimal.valueOf(0)) == 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isReducedRateANormalNumberPlusPointOne() {
@@ -238,10 +220,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0.1);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.reducedRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isReducedRateANormalNumberPlusOne() {
@@ -258,10 +237,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(1);
         // Rate Class to be tested - Success
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        //Assert that the inputted vale is 0 or above
-        assertTrue(rate.reducedRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isReducedRateANormalNumberMaxInt() {
@@ -278,9 +254,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        assertTrue(rate.reducedRate.compareTo(BigDecimal.valueOf(0)) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     /* ---------- NORMAL RATE >= REDUCED RATE TESTING ---------- */
@@ -300,7 +274,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(Integer.MAX_VALUE);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test (expected = IllegalArgumentException.class)
     public void isNormalRateGreaterThanReducedRateReducedLarger() {
@@ -317,7 +291,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(20);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateGreaterThanReducedRateBothZero() {
@@ -334,9 +308,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        assertTrue(rate.normalRate.compareTo(rate.reducedRate) == 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateGreaterThanReducedRateNormalIsLarger() {
@@ -353,9 +325,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        assertTrue(rate.normalRate.compareTo(rate.reducedRate) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
     @Test
     public void isNormalRateGreaterThanReducedRateMaxIntVsMinInt() {
@@ -372,9 +342,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-
-        assertTrue(rate.normalRate.compareTo(rate.reducedRate) >= 0);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     /* ---------- NULL INPUT TESTING ---------- */
@@ -394,7 +362,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -411,7 +379,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -428,7 +396,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -446,7 +414,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -464,7 +432,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = null;
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
 
@@ -486,7 +454,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -505,7 +473,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
     @Test (expected = IllegalArgumentException.class)
@@ -514,7 +482,7 @@ public class CollThomasTestTask1 {
         CarParkKind kind = CarParkKind.STUDENT;
         //Normal Periods
         ArrayList<Period> normalPeriods = new ArrayList<>();
-        normalPeriods.add(new Period(10, 16));
+        normalPeriods.add(new Period(10, 18));
         //Reduced Periods
         ArrayList<Period> reducedPeriods = new ArrayList<>();
         reducedPeriods.add(new Period(17, 19));
@@ -523,7 +491,7 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(10);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
     }
 
@@ -544,10 +512,10 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(2);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(rate.calculate(new Period(1,6)), BigDecimal.valueOf(17));
+        assertEquals(BigDecimal.valueOf(17), rate.calculate(new Period(1,6)));
     }
     @Test
     public void calculationUsingLargeNumbers() {
@@ -564,10 +532,10 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(300000);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(rate.calculate(new Period(7,16)), BigDecimal.valueOf(5500000));
+        assertEquals(BigDecimal.valueOf(5200000), rate.calculate(new Period(7,16)));
     }
     @Test
     public void calculationUsingSmallNumbers() {
@@ -584,10 +552,9 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0.01);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-
-        assertEquals(rate.calculate(new Period(7,16)), BigDecimal.valueOf(0.54));
+        assertEquals(BigDecimal.valueOf(0.44), rate.calculate(new Period(7,16)));
     }
     @Test
     public void calculationNotUsingReduced() {
@@ -604,10 +571,10 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(0);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(rate.calculate(new Period(0,10)), BigDecimal.valueOf(10));
+        assertEquals(BigDecimal.valueOf(10), rate.calculate(new Period(0,10)));
     }
     @Test
     public void calculationNotUsingNormal() {
@@ -624,10 +591,10 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(1);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(rate.calculate(new Period(12,22)), BigDecimal.valueOf(10));
+        assertEquals(BigDecimal.valueOf(10), rate.calculate(new Period(12,22)));
     }
     @Test
     public void calculationNotUsingNormalOrReduced() {
@@ -644,9 +611,9 @@ public class CollThomasTestTask1 {
         //Reduced Rate
         BigDecimal reducedRate = BigDecimal.valueOf(1);
         // Rate Class to be tested - Line of Failure
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(rate.calculate(new Period(6,7)), BigDecimal.valueOf(0));
+        assertEquals(BigDecimal.valueOf(0), rate.calculate(new Period(6,7)));
     }
 }
