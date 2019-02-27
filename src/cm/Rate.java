@@ -101,6 +101,9 @@ public class Rate {
                 this.hourlyReducedRate.multiply(BigDecimal.valueOf(reducedRateHours)));
         switch(this.kind){
             case STAFF:
+                if(returnRate.compareTo(BigDecimal.valueOf(16)) >= 0) {
+                    return BigDecimal.valueOf(16);
+                }
                 break;
             case STUDENT:
                 if(returnRate.compareTo(BigDecimal.valueOf(5.5)) >= 0) {
