@@ -117,6 +117,9 @@ public class Rate {
                     return returnRate;
                 }
             case MANAGEMENT:
+                if(returnRate.compareTo(BigDecimal.valueOf(3)) < 0) {
+                    return BigDecimal.valueOf(3);
+                }
                 break;
         }
         return returnRate;
