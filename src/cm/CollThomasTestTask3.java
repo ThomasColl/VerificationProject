@@ -735,4 +735,61 @@ public class CollThomasTestTask3 {
 
         assertEquals(BigDecimal.valueOf(50), rate.calculate(new Period(1,5)));
     }
+    @Test
+    public void calculationStudentBelow5Point5() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(0, 8));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(12, 24));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(5.5);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(1);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+        assertEquals(BigDecimal.valueOf(2), rate.calculate(new Period(14,15)));
+    }
+    @Test
+    public void calculationStudent5Point5() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(0, 8));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(12, 24));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(5.5);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(1);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+        assertEquals(BigDecimal.valueOf(5.5), rate.calculate(new Period(1,1)));
+    }
+    @Test
+    public void calculationStudentAbove5Point5() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(0, 8));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(12, 24));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(5.5);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(1);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+        assertEquals(BigDecimal.valueOf(8.25), rate.calculate(new Period(1,2)));
+    }
 }
