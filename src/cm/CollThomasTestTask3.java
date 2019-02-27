@@ -771,7 +771,7 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(BigDecimal.valueOf(2), rate.calculate(new Period(13,15)));
+        assertEquals(BigDecimal.valueOf(4.125), rate.calculate(new Period(13,15)));
     }
     @Test
     public void calculationStudentAbove5Point5() {
