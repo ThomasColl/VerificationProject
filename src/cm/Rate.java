@@ -103,6 +103,9 @@ public class Rate {
             case STAFF:
                 break;
             case STUDENT:
+                if(returnRate.compareTo(BigDecimal.valueOf(5.5)) >= 0) {
+                    return returnRate.subtract(returnRate.multiply(BigDecimal.valueOf(0.25)));
+                }
                 break;
             case VISITOR:
                 if(returnRate.subtract(BigDecimal.valueOf(8)).compareTo(BigDecimal.valueOf(0)) < 0) {
