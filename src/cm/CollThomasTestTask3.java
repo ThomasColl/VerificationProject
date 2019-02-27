@@ -514,8 +514,8 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-
-        assertEquals(BigDecimal.valueOf(17), rate.calculate(new Period(1,6)));
+        //Origionally said it was 15 but then became 11.25 as opposed to the 17 origionally outlined. Has been adjusted
+        assertEquals(BigDecimal.valueOf(12.625), rate.calculate(new Period(1,6)));
     }
     @Test
     public void calculationUsingLargeNumbers() {
@@ -534,9 +534,7 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-//        The following should be the same but Big Decimal seems to be very tempermental and wont read properly
-//        assertEquals(BigDecimal.valueOf(3900000), rate.calculate(new Period(7,16)));
-        assertTrue(BigDecimal.valueOf(3900000).compareTo(rate.calculate(new Period(7,16))) == 0);
+        assertEquals(BigDecimal.valueOf(3900001.375), rate.calculate(new Period(7,16)));
     }
     @Test
     public void calculationUsingSmallNumbers() {
@@ -575,8 +573,7 @@ public class CollThomasTestTask3 {
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 //        This test should be fine but due to the tempermental nature of BigDecimal it does not and thus a new pass test is needed
-//        assertEquals(BigDecimal.valueOf(10), rate.calculate(new Period(0,10)));
-        assertTrue(BigDecimal.valueOf(7.5).compareTo(rate.calculate(new Period(0,10))) == 0);
+        assertEquals(BigDecimal.valueOf(8.875), rate.calculate(new Period(0,10)));
 
     }
     @Test
@@ -596,9 +593,7 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-//        This test should be fine but due to the tempermental nature of BigDecimal it does not and thus a new pass test is needed
-//        assertEquals(BigDecimal.valueOf(7.5), rate.calculate(new Period(12,22)));
-        assertTrue(BigDecimal.valueOf(7.5).compareTo(rate.calculate(new Period(12,22))) == 0);
+        assertEquals(BigDecimal.valueOf(8.875), rate.calculate(new Period(12,22)));
     }
     @Test
     public void calculationNotUsingNormalOrReduced() {
@@ -775,7 +770,7 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(BigDecimal.valueOf(4.125), rate.calculate(new Period(4,5)));
+        assertEquals(BigDecimal.valueOf(5.5), rate.calculate(new Period(4,5)));
     }
     @Test
     public void calculationStudentAbove5Point5() {
@@ -794,9 +789,7 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-//        The following should be the same but Big Decimal seems to be very tempermental and wont read properly
-//        assertEquals(BigDecimal.valueOf(8.250), rate.calculate(new Period(1,3)));
-        assertTrue(BigDecimal.valueOf(8.25).compareTo(rate.calculate(new Period(1,3))) == 0);
+        assertEquals(BigDecimal.valueOf(9.625), rate.calculate(new Period(1,3)));
     }
     @Test
     public void calculationStaffBelow16() {
