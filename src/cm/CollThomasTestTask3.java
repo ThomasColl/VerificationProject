@@ -65,24 +65,24 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
-//    @Test
-//    public void isNormalRateANormalNumberZero() {
-//        //CarParkKind
-//        CarParkKind kind = CarParkKind.STUDENT;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(10, 12));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(17, 19));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(0);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(0);
-//        // Rate Class to be tested - Success
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//
-//    }
+    @Test
+    public void isNormalRateANormalNumberZero() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(0);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
+        // Rate Class to be tested - Success
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+    }
     @Test
     public void isNormalRateANormalNumberPlusPointOne() {
         //CarParkKind
@@ -188,23 +188,23 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
-//    @Test
-//    public void isReducedRateANormalNumberZero() {
-//        //CarParkKind
-//        CarParkKind kind = CarParkKind.STUDENT;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(10, 12));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(17, 19));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(0);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(0);
-//        // Rate Class to be tested - Success
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//    }
+    @Test
+    public void isReducedRateANormalNumberZero() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(0);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
+        // Rate Class to be tested - Success
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
     @Test
     public void isReducedRateANormalNumberPlusPointOne() {
         //CarParkKind
@@ -239,23 +239,23 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Success
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
-//    @Test
-//    public void isReducedRateANormalNumberMaxInt() {
-//        //CarParkKind
-//        CarParkKind kind = CarParkKind.STUDENT;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(10, 12));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(17, 19));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(Integer.MAX_VALUE);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(Integer.MAX_VALUE);
-//        // Rate Class to be tested - Line of Failure
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//    }
+    @Test
+    public void isReducedRateANormalNumberMaxInt() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(Integer.MAX_VALUE);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(Integer.MAX_VALUE);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
 
     /* ---------- NORMAL RATE >= REDUCED RATE TESTING ---------- */
 
@@ -293,23 +293,23 @@ public class CollThomasTestTask3 {
         // Rate Class to be tested - Line of Failure
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
-//    @Test
-//    public void isNormalRateGreaterThanReducedRateBothZero() {
-//        //CarParkKind
-//        CarParkKind kind = CarParkKind.STUDENT;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(10, 12));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(17, 19));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(0);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(0);
-//        // Rate Class to be tested - Line of Failure
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//    }
+    @Test
+    public void isNormalRateGreaterThanReducedRateBothZero() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(0);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(0);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
     @Test
     public void isNormalRateGreaterThanReducedRateNormalIsLarger() {
         //CarParkKind
@@ -347,24 +347,24 @@ public class CollThomasTestTask3 {
 
     /* ---------- NULL INPUT TESTING ---------- */
 
-//    @Test (expected = IllegalArgumentException.class)
-//    public void kindIsNullTest() {
-//        //CarParkKind
-//        CarParkKind kind = null;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(10, 12));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(17, 19));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(20);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(10);
-//        // Rate Class to be tested - Line of Failure
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//
-//    }
+    @Test (expected = IllegalArgumentException.class)
+    public void kindIsNullTest() {
+        //CarParkKind
+        CarParkKind kind = null;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(10, 12));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(17, 19));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(20);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(10);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+    }
     @Test (expected = IllegalArgumentException.class)
     public void normalPeriodsIsNullTest() {
         //CarParkKind
@@ -497,26 +497,26 @@ public class CollThomasTestTask3 {
 
     /* ---------- CALCULATION TESTING ---------- */
 
-//    @Test
-//    public void calculationBasedOnChrisExample() {
-//        //CarParkKind
-//        CarParkKind kind = CarParkKind.STUDENT;
-//        //Normal Periods
-//        ArrayList<Period> normalPeriods = new ArrayList<>();
-//        normalPeriods.add(new Period(2, 5));
-//        //Reduced Periods
-//        ArrayList<Period> reducedPeriods = new ArrayList<>();
-//        reducedPeriods.add(new Period(6, 24));
-//        //Normal Rate
-//        BigDecimal normalRate = BigDecimal.valueOf(5);
-//        //Reduced Rate
-//        BigDecimal reducedRate = BigDecimal.valueOf(2);
-//        // Rate Class to be tested - Line of Failure
-//        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
-//
-//
-//        assertEquals(BigDecimal.valueOf(17), rate.calculate(new Period(1,6)));
-//    }
+    @Test
+    public void calculationBasedOnChrisExample() {
+        //CarParkKind
+        CarParkKind kind = CarParkKind.STUDENT;
+        //Normal Periods
+        ArrayList<Period> normalPeriods = new ArrayList<>();
+        normalPeriods.add(new Period(2, 5));
+        //Reduced Periods
+        ArrayList<Period> reducedPeriods = new ArrayList<>();
+        reducedPeriods.add(new Period(6, 24));
+        //Normal Rate
+        BigDecimal normalRate = BigDecimal.valueOf(5);
+        //Reduced Rate
+        BigDecimal reducedRate = BigDecimal.valueOf(2);
+        // Rate Class to be tested - Line of Failure
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+
+
+        assertEquals(BigDecimal.valueOf(17), rate.calculate(new Period(1,6)));
+    }
     @Test
     public void calculationUsingLargeNumbers() {
         //CarParkKind
