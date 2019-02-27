@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import static cm.CarParkKind.STAFF;
+
 
 /**
  * Created by CM on 01/02/2018.
@@ -97,6 +99,26 @@ public class Rate {
         int reducedRateHours = periodStay.occurences(reduced);
         BigDecimal returnRate = this.hourlyNormalRate.multiply(BigDecimal.valueOf(normalRateHours)).add(
                 this.hourlyReducedRate.multiply(BigDecimal.valueOf(reducedRateHours)));
+        switch(this.kind){
+            case STAFF:
+                break;
+            case STUDENT:
+                break;
+            case VISITOR:
+                if(returnRate.subtract(BigDecimal.valueOf(8)).compareTo(BigDecimal.valueOf(0)) < 0) {
+                    return BigDecimal.valueOf(0);
+                }
+                else {
+                    returnRate = returnRate.subtract(BigDecimal.valueOf(8));
+                    if(returnRate.compareTo(BigDecimal.valueOf(0)) > 0) {
+                        returnRate = returnRate.divide(BigDecimal.valueOf(2));
+                    }
+
+                    return returnRate;
+                }
+            case MANAGEMENT:
+                break;
+        }
         return returnRate;
     }
 
